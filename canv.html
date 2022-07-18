@@ -1,0 +1,704 @@
+
+
+<div id="FirstCharts">
+<div id="chartContainer1" style="height: 200px; width: 33%; float: left;"></div>
+<div id="chartContainer2" style="height: 200px; width: 33%; float: left"></div>
+<div id="chartContainer3" style="height: 200px; width: 33%; float: left;"></div>
+</div>
+<div id="SecondCharts">
+<div id="chartContainer4" style="height: 200px; width: 33%; float: left;"></div>
+<div id="chartContainer5" style="height: 200px; width: 33%; float: left"></div>
+<div id="chartContainer6" style="height: 200px; width: 33%; float: left;"></div>
+</div>
+<div id="ThirdCharts">
+<div id="chartContainer7" style="height: 200px; width: 33%; float: left;"></div>
+<div id="chartContainer8" style="height: 200px; width: 33%; float: left"></div>
+<div id="chartContainer9" style="height: 200px; width: 33%; float: left;"></div>
+</div>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+var dataPointWidth = 30, whiskerThickness = 0, stemThickness = 2;
+var chart1 = new CanvasJS.Chart("chartContainer1", {
+  dataPointMaxWidth: dataPointWidth,
+  title: {
+    text: "Infiltrated Tumor Region"
+  },
+  axisX: {
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    },
+    gridThickness: 0
+  },
+  axisY: {
+    minimum: 0,
+    maximum: 100,
+    interval: 25,
+    gridThickness: 0
+  },
+  data: [
+    {
+      type: "boxAndWhisker",
+      whiskerThickness: whiskerThickness,
+      stemThickness: stemThickness,
+      dataPoints: [
+        { x: 801, y: [0, 1, 10, 15, 1], color: "blue" },
+        { x: 802, y: [0, 1, 10, 13, 5], color: "rgb(255, 204, 0)" },
+      ]
+    },
+    { //Dummy dataSeries to add indexLabel
+      type: "scatter",
+      color: "transparent",
+      indexLabelFontColor: "red",
+      dataPoints: [
+        { x: 801, y: 95, indexLabel: "N=19; M=1" },
+        { x: 802, y: 95, indexLabel: "N=19; M=3" },
+      ]
+    },
+     { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 20, color: "blue"},
+        { x: 802, y: 2, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 15, color: "blue"},
+        { x: 802, y: 5, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 5, color: "blue"},
+        { x: 802, y: 19, color: "rgb(255, 204, 0)"},
+      ]
+    }
+  ]
+});
+
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+  dataPointMaxWidth: dataPointWidth,
+
+  title: {
+    text: "Malignant cells, viable"
+  },
+  axisX: {
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    },
+    gridThickness: 0
+  },
+  axisY: {
+    minimum: 0,
+    maximum: 100,
+    interval: 25,
+    gridThickness: 0,
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    }
+  },
+  data: [
+    {
+      type: "boxAndWhisker",
+      whiskerThickness: whiskerThickness,
+      stemThickness: stemThickness,
+      dataPoints: [
+        { x: 801, y: [0, 5, 60, 100, 27], color: "blue" },
+        { x: 802, y: [0, 5, 40, 80, 8], color: "rgb(255, 204, 0)" },
+      ]
+    },
+    { //Dummy dataSeries to add indexLabel
+      type: "scatter",
+      color: "transparent",
+      indexLabelFontColor: "red",
+      dataPoints: [
+        { x: 801, y: 95, indexLabel: "N=19; M=30" },
+        { x: 802, y: 95, indexLabel: "N=19; M=1" },
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 20, color: "blue"},
+        { x: 802, y: 2, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 15, color: "blue"},
+        { x: 802, y: 5, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 5, color: "blue"},
+        { x: 802, y: 19, color: "rgb(255, 204, 0)"},
+      ]
+    },
+     { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 80, color: "blue"},
+        { x: 802, y: 75, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 95, color: "blue"},
+        { x: 802, y: 65, color: "rgb(255, 204, 0)"},
+      ]
+    }
+  ]
+});
+
+var chart3 = new CanvasJS.Chart("chartContainer3", {
+  dataPointMaxWidth: dataPointWidth,
+  title: {
+    text: "Malignant cells, viable and immune cells"
+  },
+  subtitles: [
+    {
+      text: "PB1_2100MG",
+      verticalAlign: "center",
+      horizontalAlign: "right"
+    }
+  ],
+  axisX: {
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    },
+    gridThickness: 0
+  },
+  axisY: {
+    minimum: 0,
+    maximum: 100,
+    interval: 25,
+    gridThickness: 0,
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    }
+  },
+
+  data: [
+    {
+      type: "boxAndWhisker",
+      whiskerThickness: whiskerThickness,
+      stemThickness: stemThickness,
+      dataPoints: [
+        { x: 801, y: [0, 5, 60, 100, 27], color: "blue" },
+        { x: 802, y: [0, 5, 40, 80, 15], color: "rgb(255, 204, 0)" },
+      ]
+    },
+    { //Dummy dataSeries to add indexLabel
+      type: "scatter",
+      color: "transparent",
+      indexLabelFontColor: "red",
+      dataPoints: [
+        { x: 801, y: 95, indexLabel: "N=19; M=30" },
+        { x: 802, y: 95, indexLabel: "N=19; M=1" },
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 20, color: "blue"},
+        { x: 802, y: 2, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 15, color: "blue"},
+        { x: 802, y: 5, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 5, color: "blue"},
+        { x: 802, y: 19, color: "rgb(255, 204, 0)"},
+      ]
+    },
+     { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 80, color: "blue"},
+        { x: 802, y: 75, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 95, color: "blue"},
+        { x: 802, y: 65, color: "rgb(255, 204, 0)"},
+      ]
+    }
+  ]
+});
+
+var chart4 = new CanvasJS.Chart("chartContainer4", {
+  dataPointMaxWidth: dataPointWidth,
+  axisX: {
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    },
+    gridThickness: 0
+  },
+  axisY: {
+    minimum: 0,
+    maximum: 100,
+    interval: 25,
+    gridThickness: 0
+  },
+  data: [
+     {
+      type: "boxAndWhisker",
+      whiskerThickness: whiskerThickness,
+      stemThickness: stemThickness,
+      dataPoints: [
+        { x: 801, y: [0, 1, 10, 15, 1], color: "blue" },
+        { x: 802, y: [0, 1, 10, 13, 5], color: "rgb(255, 204, 0)" },
+      ]
+    },
+    { //Dummy dataSeries to add indexLabel
+      type: "scatter",
+      color: "transparent",
+      indexLabelFontColor: "red",
+      dataPoints: [
+        { x: 801, y: 95, indexLabel: "N=19; M=1" },
+        { x: 802, y: 95, indexLabel: "N=19; M=3" },
+      ]
+    },
+     { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 20, color: "blue"},
+        { x: 802, y: 2, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 15, color: "blue"},
+        { x: 802, y: 5, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 5, color: "blue"},
+        { x: 802, y: 19, color: "rgb(255, 204, 0)"},
+      ]
+    }
+  ]
+});
+
+var chart5 = new CanvasJS.Chart("chartContainer5", {
+  dataPointMaxWidth: dataPointWidth,
+  axisX: {
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    },
+    gridThickness: 0
+  },
+  axisY: {
+    minimum: 0,
+    maximum: 100,
+    interval: 25,
+    gridThickness: 0,
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    }
+  },
+  data: [
+     {
+      type: "boxAndWhisker",
+      whiskerThickness: whiskerThickness,
+      stemThickness: stemThickness,
+      dataPoints: [
+        { x: 801, y: [0, 5, 60, 100, 27], color: "blue" },
+        { x: 802, y: [0, 5, 40, 80, 8], color: "rgb(255, 204, 0)" },
+      ]
+    },
+    { //Dummy dataSeries to add indexLabel
+      type: "scatter",
+      color: "transparent",
+      indexLabelFontColor: "red",
+      dataPoints: [
+        { x: 801, y: 95, indexLabel: "N=19; M=30" },
+        { x: 802, y: 95, indexLabel: "N=19; M=1" },
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 20, color: "blue"},
+        { x: 802, y: 2, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 15, color: "blue"},
+        { x: 802, y: 5, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 5, color: "blue"},
+        { x: 802, y: 19, color: "rgb(255, 204, 0)"},
+      ]
+    },
+     { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 80, color: "blue"},
+        { x: 802, y: 75, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 95, color: "blue"},
+        { x: 802, y: 65, color: "rgb(255, 204, 0)"},
+      ]
+    }
+  ]
+});
+
+var chart6 = new CanvasJS.Chart("chartContainer6", {
+  dataPointMaxWidth: dataPointWidth,
+  subtitles: [
+    {
+      text: "PB2_2100MG",
+      verticalAlign: "center",
+      horizontalAlign: "right"
+    }
+  ],
+  axisX: {
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    },
+    gridThickness: 0
+  },
+  axisY: {
+    minimum: 0,
+    maximum: 100,
+    interval: 25,
+    gridThickness: 0,
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    }
+  },
+  data: [
+    {
+      type: "boxAndWhisker",
+      whiskerThickness: whiskerThickness,
+      stemThickness: stemThickness,
+      dataPoints: [
+        { x: 801, y: [0, 10, 60, 100, 50], color: "blue" },
+        { x: 802, y: [0, 5, 50, 80, 35], color: "rgb(255, 204, 0)" },
+      ]
+    },
+    { //Dummy dataSeries to add indexLabel
+      type: "scatter",
+      color: "transparent",
+      indexLabelFontColor: "red",
+      dataPoints: [
+        { x: 801, y: 95, indexLabel: "N=19; M=30" },
+        { x: 802, y: 95, indexLabel: "N=19; M=1" },
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 20, color: "blue"},
+        { x: 802, y: 2, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 15, color: "blue"},
+        { x: 802, y: 5, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 5, color: "blue"},
+        { x: 802, y: 19, color: "rgb(255, 204, 0)"},
+      ]
+    },
+     { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 80, color: "blue"},
+        { x: 802, y: 75, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 95, color: "blue"},
+        { x: 802, y: 65, color: "rgb(255, 204, 0)"},
+      ]
+    }
+  ]
+});
+
+var chart7 = new CanvasJS.Chart("chartContainer7", {
+  dataPointMaxWidth: dataPointWidth,
+  axisX : {
+    interval: 1
+  },
+  axisY: {
+    minimum: 0,
+    maximum: 100,
+    interval: 25,
+    gridThickness: 0
+  },
+  data: [
+    {
+      type: "boxAndWhisker",
+      whiskerThickness: whiskerThickness,
+      stemThickness: stemThickness,
+      dataPoints: [
+        { x: 801, y: [0, 1, 5, 15, 1], color: "blue" },
+        { x: 802, y: [0, 1, 5, 13, 5], color: "rgb(255, 204, 0)" },
+      ]
+    },
+    { //Dummy dataSeries to add indexLabel
+      type: "scatter",
+      color: "transparent",
+      indexLabelFontColor: "red",
+      dataPoints: [
+        { x: 801, y: 95, indexLabel: "N=19; M=1" },
+        { x: 802, y: 95, indexLabel: "N=19; M=3" },
+      ]
+    },
+     { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 20, color: "blue"},
+        { x: 802, y: 2, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 15, color: "blue"},
+        { x: 802, y: 5, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 5, color: "blue"},
+        { x: 802, y: 19, color: "rgb(255, 204, 0)"},
+      ]
+    }
+  ]
+});
+
+var chart8 = new CanvasJS.Chart("chartContainer8", {
+  dataPointMaxWidth: dataPointWidth,
+  axisX : {
+    interval: 1
+  },
+  axisY: {
+    minimum: 0,
+    maximum: 100,
+    interval: 25,
+    gridThickness: 0,
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    }
+  },
+  data: [
+   {
+      type: "boxAndWhisker",
+      whiskerThickness: whiskerThickness,
+      stemThickness: stemThickness,
+      dataPoints: [
+        { x: 801, y: [0, 1, 6, 15, 1], color: "blue" },
+        { x: 802, y: [0, 1, 6, 13, 5], color: "rgb(255, 204, 0)" },
+      ]
+    },
+    { //Dummy dataSeries to add indexLabel
+      type: "scatter",
+      color: "transparent",
+      indexLabelFontColor: "red",
+      dataPoints: [
+        { x: 801, y: 95, indexLabel: "N=19; M=1" },
+        { x: 802, y: 95, indexLabel: "N=19; M=3" },
+      ]
+    },
+     { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 20, color: "blue"},
+        { x: 802, y: 2, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 15, color: "blue"},
+        { x: 802, y: 5, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 5, color: "blue"},
+        { x: 802, y: 19, color: "rgb(255, 204, 0)"},
+      ]
+    }
+  ]
+});
+
+var chart9 = new CanvasJS.Chart("chartContainer9", {
+  dataPointMaxWidth: dataPointWidth,
+  subtitles: [
+    {
+      text: "PB4_2100MG",
+      verticalAlign: "center",
+      horizontalAlign: "right"
+    }
+  ],
+  axisX : {
+    interval: 1
+  },
+  axisY: {
+    minimum: 0,
+    maximum: 100,
+    interval: 25,
+    gridThickness: 0,
+    lineThickness: 0,
+    tickLength: 0,
+    labelFormatter: function() {
+      return ""
+    }
+  },
+
+  data: [
+    {
+      type: "boxAndWhisker",
+      whiskerThickness: whiskerThickness,
+      stemThickness: stemThickness,
+      dataPoints: [
+        { x: 801, y: [0, 1, 4, 15, 1], color: "blue" },
+        { x: 802, y: [0, 1, 4, 13, 5], color: "rgb(255, 204, 0)" },
+      ]
+    },
+    { //Dummy dataSeries to add indexLabel
+      type: "scatter",
+      color: "transparent",
+      indexLabelFontColor: "red",
+      dataPoints: [
+        { x: 801, y: 95, indexLabel: "N=19; M=1" },
+        { x: 802, y: 95, indexLabel: "N=19; M=3" },
+      ]
+    },
+     { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 20, color: "blue"},
+        { x: 802, y: 2, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 15, color: "blue"},
+        { x: 802, y: 5, color: "rgb(255, 204, 0)"},
+      ]
+    },
+    { //Adding line dataSeries connecting 2 dataPoints - Any (Unlimited) number of lines can be added similarly
+      type: "line",
+      lineColor: "grey",
+      dataPoints: [
+        { x: 801, y: 5, color: "blue"},
+        { x: 802, y: 19, color: "rgb(255, 204, 0)"},
+      ]
+    }
+  ]
+});
+
+
+
+
+
+chart1.render();
+chart2.render();
+chart3.render();
+chart4.render();
+chart5.render();
+chart6.render();
+chart7.render();
+chart8.render();
+chart9.render();
+</script>
